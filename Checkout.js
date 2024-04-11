@@ -8,7 +8,8 @@ document.getElementById('tourForm').addEventListener('submit', function (event) 
     const date = document.getElementById('date').value;
     const time = document.getElementById('time').value;
     const boarding = document.getElementById('boarding').value;
-    const contact = document.getElementById('contact').value;
+    const contactm = document.getElementById('contactm').value;
+    const contacte = document.getElementById('contacte').value;
 
     // Construct receipt message
     const receiptMessage = `
@@ -19,7 +20,8 @@ document.getElementById('tourForm').addEventListener('submit', function (event) 
         Date: ${date}
         Time: ${time}
         Boarding Location: ${boarding}
-        Contact Details: ${contact}
+        Mobile: ${contactm}
+        Email Id : ${contacte}
     `;
     const receiptWindow = window.open('', 'Receipt', 'width=600,height=400');
     receiptWindow.document.body.innerHTML = `<pre>${receiptMessage}</pre>`;
